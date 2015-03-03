@@ -59,7 +59,7 @@ dispatch_queue_t myQueue;
         [instance.taskArray addObject:processBlock];
 }
 
-//main methot to be used outside of class. Try to run process after time interval
+//main method to be used outside of class. Try to run process after time interval
 -(void)AddTask:(void(^)(void))processBlock timeInterval:(int)timeInterval
 {
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(timeInterval * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
